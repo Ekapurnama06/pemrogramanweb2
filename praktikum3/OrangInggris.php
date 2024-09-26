@@ -1,12 +1,12 @@
 <?php
 
-include "Orang.php";
+require_once "Orang.php";
 
 class OrangInggris extends Orang{
 
-    // Override
+    //Override
     public function ucapSalam()
     {
-        "Hello My name is " . $this->nama;
+       echo "Hello My name is " . $this->nama;
     }
 }

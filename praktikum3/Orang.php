@@ -3,7 +3,7 @@
 class Orang{
     protected $nama;
 
-    // construktor
+    //constructor
     public function __construct($nama)
     {
         $this->nama = $nama;
@@ -11,6 +11,6 @@ class Orang{
 
     //method
     public function ucapSalam(){
-        echo "Hallo nama saya " . $this->nama;
+        echo "Halo nama saya " . $this->nama;
     }
 }

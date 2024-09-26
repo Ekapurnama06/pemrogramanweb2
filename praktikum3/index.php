@@ -2,40 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum</title>
 </head>
 <body>
-    <hi>Konsep Pewarisan</h1>
+    <h1>Konsep Pewarisan</h1>
     <div class="">
         <?php
         include "OrangBiasa.php";
         include "OrangInggris.php";
-        include "Mawasiswa.php";
+        include "Mahasiswa.php";
 
-        $jamet = new OrangBiasa("jamet");
-        $jamet->ucapSalam();
+        $james = new OrangBiasa('James');
+        $james->ucapSalam();
         echo "<br>";
 
-        $Ena = new OrangInggris("Ena");
-        $Ena->ucapSalam(); //override
+        $parto = new OrangInggris('Parto');
+        $parto->ucapSalam(); //override
         echo "<br>";
 
-        $Eka = new Mahasiswa("Eka");
-        $Eka->ucapSalam();
+        $emely = new Mahasiswa('Emely');
+        $emely->ucapSalam();
         echo "<br>";
-        $Eka->setNim("701230069");
-        $Eka->setProdi("Sistem informasi");
+        $emely->setNim("701230069");
+        $emely->setProdi("Sistem Informasi");
+        
+        $nilaiEmely = new Nilai();
+        $nilaiEmely->setTugas(90);
+        $nilaiEmely->setUts(76);
+        $nilaiEmely->setUas(78);
 
-        $nilaiEka = new Nilai();
-        $nilaiEka->setTugas(90);
-        $nilaiEka->setTugas(80);
-        $nilaiEka->setUts(90);
-        $nilaiEka->setUas(95);
-
-        $Eka->setNilai($nilaiEka);
-        $Eka->tampilkanData();
-    ?>
+        $emely->setNilai($nilaiEmely);
+        $emely->tampilkanData();
+        ?>
     </div>
 </body>
 </html>

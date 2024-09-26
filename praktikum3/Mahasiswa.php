@@ -1,32 +1,29 @@
-<?php
+<?php 
 
-include  "Orang.php";
+require_once "Orang.php";
+require_once "Nilai.php";
 
-class Mahasiswa extends Orang{
-    protected string$nim;
-    protected string$prodi;
+class Mahasiswa extends Orang {
+    protected $nim;
+    protected $prodi;
     protected Nilai $nilai;
 
     public function setNim($nim){
         $this->nim = $nim;
     }
 
-    public function setprodi($prodi){
+    public function setProdi($prodi){
         $this->prodi = $prodi;
     }
-
-    public function setNilai($Nilai) {
-        $this->nilai = $Nilai; 
+    public function setNilai($nilai){
+        $this->nilai = $nilai;
     }
-
 
     public function tampilkanData(){
-        echo "Nama : " . $this->nama;
-        echo "NIM : " . $this->nim;
-        echo "prodi : " . $this->prodi;
+        echo "Nama : " . $this->nama . "<br>";
+        echo "Nim : " . $this->nim . "<br>";
+        echo "Prodi : " . $this->prodi . "<br>";
         echo "Nilai Tugas : " . $this->nilai->getTugas() . "<br>";
-        echo "Nilai UTS : " . $this->nilai->getUTS() . "<br>";
-        echo "Nilai UAS : " . $this->nilai->getUAS() . "<br>";
+        echo "Nilai UTS : " . $this->nilai->getUts() . "<br>";
     }
-   
 }
