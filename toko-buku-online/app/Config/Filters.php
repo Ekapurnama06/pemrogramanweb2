@@ -12,7 +12,6 @@ use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\PageCache;
 use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
-
 class Filters extends BaseFilters
 {
     /**
@@ -73,6 +72,11 @@ class Filters extends BaseFilters
             // 'csrf',
             // 'invalidchars',
         ],
+    'before' => [
+        // ...
+        'session' => ['except' => ['','chart','login*', 'register', 'auth/a/*', 'logout']],
+    ],
+
         'after' => [
             // 'honeypot',
             // 'secureheaders',
@@ -92,8 +96,9 @@ class Filters extends BaseFilters
      *
      * @var array<string, list<string>>
      */
-    public array $methods = [];
 
+    public array $methods = [];
+    
     /**
      * List of filter aliases that should run on any
      * before or after URI patterns.

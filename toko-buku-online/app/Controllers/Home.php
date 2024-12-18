@@ -21,8 +21,4 @@ class Home extends BaseController
         public function submit (){
             return view('submit');
         }
-
-        public function transaksi (){
-            return view('admin/transaksi');
-        }
 }
